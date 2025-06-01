@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: '**', // tidak disarankan, tapi bisa dipakai untuk semua host
+                pathname: '/**',
+            },
+        ],
+    },
+    /* config options here */
 };
 
 export default nextConfig;
